@@ -49,11 +49,12 @@ La **`UserHomeActivity`** es el hub central para los usuarios registrados. Desde
 
 ## 📸 Capturas de Pantalla
 
-|             Menú Principal              |             Afinador Específico             |                 Lista de Instrumentos                 |
-|:---------------------------------------:|:-------------------------------------------:|:-----------------------------------------------------:|
-| ![UserHome](readme-assets/app_menu.jpg) | ![SpecificTuner](readme-assets/test220.jpg) | ![InstrumentsList](readme-assets/all_instruments.png) |
+|                                                                Menú Principal                                                                | Afinador Específico | Lista de Instrumentos |
+|:---:| :---: | :---: |
+| <img src="https://github.com/MartaHPortilla/BatucadaFina/blob/main/readme-assets/app_menu.jpg?raw=true" alt="Pantalla Usuario" width="250"/> | <img src="https://github.com/MartaHPortilla/BatucadaFina/blob/main/readme-assets/test220.jpg?raw=true" alt="Afinador Específico" width="250"/> | <img src="https://github.com/MartaHPortilla/BatucadaFina/blob/main/readme-assets/all_instruments.png?raw=true" alt="Lista de Instrumentos" width="250"/> |
 
 ---
+
 
 ## ✨ Características Principales
 
