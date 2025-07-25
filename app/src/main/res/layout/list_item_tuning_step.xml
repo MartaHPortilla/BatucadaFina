@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.activities.HowToTuneTipsActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/textViewStepTitle"
+            style="?attr/textAppearanceHeadlineSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:textColor="?attr/colorOnBackground"
+            android:textSize="26sp"
+            android:gravity="start"
+            tools:text="15. Mantenimiento regular: ¡no dejes que el tambor decaiga!" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/md_theme_onPrimary"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <ImageView
+                android:id="@+id/imageViewStepImage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:contentDescription="Imagen del paso de afinación"
+                android:scaleType="fitCenter"
+                tools:srcCompat="@drawable/step7_pic" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/textViewStepDescription"
+            android:textSize="15sp"
+            android:justificationMode="inter_word"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Aquí va la descripción detallada del paso de afinación, explicando qué hacer con el tambor, las herramientas necesarias, y cualquier otro consejo útil para el usuario
+            Aquí va la descripción detallada del paso de afinación, explicando qué hacer con el tambor, las herramientas necesarias, y cualquier otro consejo útil para el usuario." />
+
+    </LinearLayout>
+    <!--
+        JustificationMode solo funciona a partir de API 26
+    -->
+</ScrollView>

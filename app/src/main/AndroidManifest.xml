@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Permiso para grabar el audio -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- Permiso para acceder al almacenamiento -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- //TODO: actualizar permisos -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/BatukAfinaTheme"
+        tools:targetApi="31">
+        <!-- Configuración de FileProvider -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"> <!-- permite que otros apps accedan a los archivos concediendo permisos temporalmente -->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider> <!-- MainActivity con intent filter -->
+        <activity
+            android:name=".ui.activities.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Resto de activities -->
+        <activity
+            android:name=".ui.activities.ImagePickerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.TuneFavoritesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.InstrumentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.BasicTunerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.UserHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.LoginUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.CreateAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.CreateInstrumentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.TipsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.HowToTuneTipsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.FrequencyChartTipsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.EditInstrumentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.SpecificTunerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.InstrumentDetailsActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

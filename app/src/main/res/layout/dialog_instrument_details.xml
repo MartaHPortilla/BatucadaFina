@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorSurface"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <ImageView
+        android:id="@+id/dialogIconDetails"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="12dp"
+        app:srcCompat="@drawable/ic_music_notes_icons"/>
+
+    <TextView
+        android:id="@+id/dialogTitleInstrumentDetails"
+        style="?attr/textAppearanceHeadlineSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_horizontal"
+        android:textColor="?attr/colorOnSurface"
+        tools:text="Detalles del Instrumento" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="?attr/textAppearanceTitleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre: "
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dialogTextInstrumentName"
+            style="?attr/textAppearanceBodyMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/colorOnSurface"
+            tools:text="Surdo Grande" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutInstrumentFrequencyDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="?attr/textAppearanceTitleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Frecuencia: "
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dialogTextInstrumentFrequency"
+            style="?attr/textAppearanceBodyMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/colorOnSurface"
+            tools:text="123.45 Hz" />
+    </LinearLayout>
+
+    <TextView
+        style="?attr/textAppearanceTitleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Información adicional:"
+        android:textColor="?attr/colorOnSurfaceVariant"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="16dp"
+        android:maxHeight="150dp">
+
+        <TextView
+            android:id="@+id/dialogTextInstrumentInfo"
+            style="?attr/textAppearanceBodyMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="?attr/colorOnSurface"
+            tools:text="Información detallada... La percusión es una ciencia más compleja de lo que puede parecer. No se trata tan solo de golpes distribuidos en el tiempo de forma que estén combinados con silencios y conformen patrones de sonido homogéneos (o no)." />
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textViewCopyInfo"
+        style="?attr/textAppearanceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:background="?attr/selectableItemBackground"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="8dp"
+        android:text="Copiar información"
+        android:textColor="?attr/colorPrimary"
+        app:drawableStartCompat="@drawable/ic_copy"
+        app:drawableTint="@color/md_theme_onBackground" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonDialogDetailsClose"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:text="Cerrar" />
+</LinearLayout>

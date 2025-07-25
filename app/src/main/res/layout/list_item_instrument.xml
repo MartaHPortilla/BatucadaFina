@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/md_theme_background"
+        android:padding="4dp">
+
+        <ImageView
+            android:id="@+id/imageViewItemInstrumentIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="Icono de instrumento"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/textViewItemInstrumentName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_launcher_foreground" />
+
+        <TextView
+            android:id="@+id/textViewItemInstrumentName"
+            style="@style/TextAppearance.BatukAfina.BodyMedium16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/imageButtonItemFavorite"
+            app:layout_constraintStart_toEndOf="@+id/imageViewItemInstrumentIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Nombre del Instrumento Largo" />
+
+        <TextView
+            android:id="@+id/textViewItemInstrumentInfo"
+            style="@style/TextAppearance.BatukAfina.BodyMedium14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/textViewItemInstrumentName"
+            app:layout_constraintStart_toStartOf="@+id/textViewItemInstrumentName"
+            app:layout_constraintTop_toBottomOf="@+id/textViewItemInstrumentName"
+            tools:text="Freq: 440.0 Hz / Información adicional" />
+
+        <ImageButton
+            android:id="@+id/imageButtonItemFavorite"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Marcar como favorito"
+            android:padding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textViewItemInstrumentName"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_star" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

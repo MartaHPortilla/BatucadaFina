@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="?attr/colorSurface">
+
+    <ImageView
+        android:id="@+id/dialogIconLogout"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        app:srcCompat="@drawable/ic_logout"
+        android:tint="@color/batuk_default_error"/>
+
+    <TextView
+        android:id="@+id/dialogTitleLogout"
+        style="?attr/textAppearanceHeadlineSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cerrar Sesión"
+        android:gravity="center_horizontal"
+        android:textColor="?attr/colorOnSurface"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/dialogMessageLogout"
+        style="?attr/textAppearanceBodyMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="?attr/colorOnSurfaceVariant"
+        android:layout_marginBottom="24dp"
+        android:text="¿Estás seguro de que deseas cerrar sesión?" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonDialogCancelLogout"
+            style="@style/Widget.Material3.Button.TextButton.Dialog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="No, cancelar"
+            android:textColor="?attr/colorOnSurface" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonDialogConfirmLogout"
+            style="@style/Widget.Material3.Button.TextButton.Dialog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="Sí, quiero"
+            android:textColor="@color/md_theme_error" />
+    </LinearLayout>
+
+</LinearLayout>

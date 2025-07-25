@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- Paleta batuk / todos los colores parten de estos códigos -->
+    <color name="batuk_background">#161927</color>
+    <color name="batuk_surface_dark">#1e2a34</color>
+    <color name="batuk_surface_variant_dark">#4c5b67</color>
+    <color name="batuk_on_dark_primary_text">#d6e2d5</color>
+    <color name="batuk_on_dark_secondary_text">#8fa8a2</color>
+    <color name="batuk_accent_magenta">#a9016d</color>
+    <color name="batuk_white">#FFFFFFFF</color>
+    <color name="batuk_black">#FF000000</color>
+    <color name="batuk_transparent">#00000000</color>
+    <color name="batuk_default_error">#B00020</color>
+    <color name="batuk_error_container">#FFDAD6</color>
+    <color name="batuk_onError_container">#410E0B</color>
+
+
+    <!-- Paleta Material Design por roles, usando colores de batuk -->
+
+    <color name="md_theme_primary">@color/batuk_accent_magenta</color>
+    <color name="md_theme_onPrimary">@color/batuk_white</color>
+    <color name="md_theme_primaryContainer">@color/batuk_surface_variant_dark</color>
+    <color name="md_theme_onPrimaryContainer">@color/batuk_white</color>
+
+    <color name="md_theme_secondary">@color/batuk_accent_magenta</color>
+    <color name="md_theme_onSecondary">@color/batuk_on_dark_primary_text</color>
+    <color name="md_theme_secondaryContainer">@color/batuk_surface_variant_dark</color>
+    <color name="md_theme_onSecondaryContainer">@color/batuk_on_dark_primary_text</color>
+
+    <color name="md_theme_tertiary">@color/batuk_accent_magenta</color>
+    <color name="md_theme_onTertiary">@color/batuk_on_dark_primary_text</color>
+    <color name="md_theme_tertiaryContainer">@color/batuk_surface_variant_dark</color>
+    <color name="md_theme_onTertiaryContainer">@color/batuk_on_dark_primary_text</color>
+
+    <color name="md_theme_error">@color/batuk_default_error</color>
+    <color name="md_theme_onError">@color/batuk_white</color>
+    <color name="md_theme_errorContainer">@color/batuk_error_container</color>
+    <color name="md_theme_onErrorContainer">@color/batuk_onError_container</color>
+
+    <color name="md_theme_background">@color/batuk_background</color>
+    <color name="md_theme_onBackground">@color/batuk_on_dark_primary_text</color>
+
+    <color name="md_theme_surface">@color/batuk_surface_dark</color>
+    <color name="md_theme_onSurface">@color/batuk_on_dark_primary_text</color>
+    <color name="md_theme_surfaceVariant">@color/batuk_surface_variant_dark</color>
+    <color name="md_theme_onSurfaceVariant">@color/batuk_on_dark_secondary_text</color>
+
+    <color name="md_theme_outline">@color/batuk_on_dark_primary_text</color>
+
+    <!-- Paleta propia por roles -->
+
+    <color name="text_color_primary_app">@color/md_theme_onBackground</color>
+    <color name="text_color_secondary_app">@color/md_theme_onSurfaceVariant</color>
+    <color name="text_color_accent_app">@color/md_theme_primary</color>
+    <color name="button_text_color_on_primary">@color/md_theme_onPrimary</color>
+    <color name="button_text_color_on_secondary">@color/md_theme_onSecondary</color>
+    <color name="button_text_color_on_surface">@color/md_theme_onPrimary</color>
+    <color name="button_background_top_app">@color/md_theme_primaryContainer</color>
+    <color name="button_background_main_app">@color/md_theme_primary</color>
+    <color name="button_background_create_app">@color/md_theme_secondary</color>
+    <color name="button_background_regular_app">@color/md_theme_surfaceVariant</color>
+    <color name="text_input_layout_background_app">@color/md_theme_primaryContainer</color>
+    <color name="text_input_layout_hint_app">@color/md_theme_onBackground</color>
+    <color name="tuner_red_indicator">#FF5252</color>
+    <color name="tuner_yellow_indicator">#FFD740</color>
+    <color name="tuner_green_indicator">#69F0AE</color>
+
+</resources>

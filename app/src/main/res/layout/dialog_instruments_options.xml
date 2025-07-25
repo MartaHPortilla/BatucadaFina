@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorSurface"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <ImageView
+        android:id="@+id/dialogInstrumentOptionsIcon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="12dp"
+        app:srcCompat="@drawable/ic_maracas_icons8"/>
+
+    <TextView
+        android:id="@+id/dialogInstrumentOptionsTitle"
+        style="?attr/textAppearanceHeadlineSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_horizontal"
+        android:text="Opciones"
+        android:textColor="?attr/colorOnSurface" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/optionDetails"
+        style="?attr/textAppearanceBodyLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:drawableStart="@drawable/ic_mini_details"
+        android:drawablePadding="16dp"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:text="Ver detalles"
+        android:textColor="?attr/colorOnSurface"
+        android:visibility="visible" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/optionTune"
+        style="?attr/textAppearanceBodyLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:drawableStart="@drawable/ic_microphone"
+        android:drawableTint="@color/md_theme_primary"
+        android:drawablePadding="16dp"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:text="Afinar instrumento"
+        android:textColor="?attr/colorOnSurface"
+        android:visibility="visible" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/optionModify"
+        style="?attr/textAppearanceBodyLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:drawableStart="@drawable/ic_placeholder"
+        android:drawableTint="@color/md_theme_primary"
+        android:drawablePadding="16dp"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:text="Editar instrumento"
+        android:textColor="?attr/colorOnSurface"
+        android:visibility="visible" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/optionDelete"
+        style="?attr/textAppearanceBodyLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:drawableStart="@drawable/ic_delete_forever"
+        android:drawablePadding="16dp"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:text="Eliminar instrumento"
+        android:textColor="?attr/colorOnSurface"
+        android:visibility="visible" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonDialogOptionsCancel"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="24dp"
+        android:text="Cancelar" />
+</LinearLayout>

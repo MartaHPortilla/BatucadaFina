@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/md_theme_onBackground" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="?attr/colorSurfaceVariant"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarFrequencyChart">
+
+
+            <TextView
+                android:id="@+id/textViewNote"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="50dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                style="?attr/textAppearanceBodyMedium"
+                android:textColor="?attr/colorOnSurface"
+                tools:text="A4 | LA" />
+
+
+            <TextView
+                android:id="@+id/textViewFrequencyHz"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="20dp"
+                style="?attr/textAppearanceBodyMedium"
+                android:textColor="?attr/colorOnSurface"
+                android:gravity="end"
+                tools:text="440.00 Hz" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/md_theme_onBackground" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

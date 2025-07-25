@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface"
+    tools:context=".ui.activities.SpecificTunerActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarSpecificTuner"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:titleTextColor="?attr/colorOnSurface"
+        tools:title="Afinar: Surdo 1 - 110Hz" />
+
+    <FrameLayout
+        android:id="@+id/frameLayoutDial"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarSpecificTuner">
+
+        <ImageView
+            android:id="@+id/dialScaleImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="Escala del afinador"
+            android:src="@drawable/last_dial_scale_allcolor" />
+
+        <ImageView
+            android:id="@+id/pivotCircleImageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:contentDescription="Pivote del afinador"
+            android:src="@drawable/pivot2" />
+
+        <ImageView
+            android:id="@+id/needleImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="12dp"
+            android:contentDescription="Aguja del afinador"
+            android:scaleType="fitCenter"
+            android:src="@drawable/just_needle2" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/noteInfoLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/frameLayoutDial"
+        android:layout_marginTop="24dp">
+
+        <TextView
+            android:id="@+id/targetNoteTextView"
+            style="?attr/textAppearanceHeadlineSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Objetivo: A#4"
+            android:textColor="?attr/colorPrimary" />
+
+        <TextView
+            android:id="@+id/detectedNoteTextView"
+            style="?attr/textAppearanceTitleMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            tools:text="Detectando: A#4"
+            android:textColor="?attr/colorOnSurfaceVariant" />
+
+        <TextView
+            android:id="@+id/centsTextView"
+            style="?attr/textAppearanceBodyLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            tools:text="+15.3 cents"
+            android:textColor="?attr/colorOnSurface" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tuningIndicatorTextView"
+        style="?attr/textAppearanceHeadlineSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noteInfoLayout"
+        tools:text="MUY AGUDO"
+        tools:textColor="@color/tuner_red_indicator"
+        tools:visibility="visible" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/recordButton"
+        style="@style/MagentaButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:paddingLeft="32dp"
+        android:paddingTop="16dp"
+        android:paddingRight="32dp"
+        android:paddingBottom="16dp"
+        android:text="Iniciar Afinación"
+        app:icon="@drawable/ic_placeholder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/statusTextView"
+        style="?attr/textAppearanceCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Status: Listo"
+        android:textColor="?attr/colorOnSurfaceVariant"
+        app:layout_constraintBottom_toTopOf="@+id/recordButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Status: Afinación en curso..." />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

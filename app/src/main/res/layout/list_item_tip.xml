@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:background="@color/md_theme_background">
+
+        <ImageView
+            android:id="@+id/ImageViewItemTipIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="Icono de instrumento"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/textViewItemTipName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_launcher_foreground" />
+
+        <TextView
+            android:id="@+id/textViewItemTipName"
+            style="@style/TextAppearance.BatukAfina.BodyMedium16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginEnd="4dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ImageViewItemTipIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Nombre del Tip Muy Largo" />
+
+        <TextView
+            android:id="@+id/textViewItemTipInfo"
+            style="@style/TextAppearance.BatukAfina.BodyMedium14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/textViewItemTipName"
+            app:layout_constraintStart_toStartOf="@+id/textViewItemTipName"
+            app:layout_constraintTop_toBottomOf="@+id/textViewItemTipName"
+            tools:text="Texto de prueba para que se muestre. Texto de prueba para que se muestre. Texto de prueba para que se muestre. Texto de prueba para que se muestre." />
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
