@@ -1,12 +1,16 @@
 # BatukAfina 🥁
-
-**Un afinador de percusión especializado y una herramienta educativa para Android, construido con Kotlin y un motor de procesamiento de audio avanzado.**
-
-![Portada de BatukAfina](readme-assets/main.png)
+[![Kotlin Version](https://img.shields.io/badge/Kotlin-100%25-7F52FF.svg?style=for-the-badge&logo=kotlin)](https://kotlinlang.org/)
+[![API](https://img.shields.io/badge/API-24%2B-A4C639.svg?style=for-the-badge&logo=android)](https://android-arsenal.com/api?level=24)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![GitHub last commit](https://img.shields.io/github/last-commit/MartaHPortilla/BatucadaFina?style=for-the-badge&logo=github)](https://github.com/MartaHPortilla/BatucadaFina/commits/main)
 
 ---
 
 ## 🎯 Sobre el Proyecto
+
+**Un afinador de percusión especializado y una herramienta educativa para Android, construido con Kotlin y un motor de procesamiento de audio avanzado.**
+
+![Portada de BatukAfina](readme-assets/main.png)
 
 BatukAfina nace de una necesidad real en la comunidad de músicos de percusión, especialmente en los ensambles de batucada: la falta de una herramienta de afinación precisa y fácil de usar para tambores. Los afinadores cromáticos estándar a menudo fallan al interpretar los complejos armónicos de la percusión, llevando a errores de octava y a una experiencia frustrante para el músico.
 
@@ -19,34 +23,6 @@ El proyecto fue desarrollado desde cero como proyecto final de DAM, abarcando to
 
 ---
 
-## 🗺️ Flujo de Navegación
-
-El flujo de navegación de la aplicación ha sido diseñado para ser intuitivo y funcional, separando claramente la experiencia del usuario no registrado de la del usuario autenticado.
-
-### Flujo de Entrada y Autenticación
-
-* El punto de entrada es la **`MainActivity`**, que actúa como un enrutador. Al iniciarse, comprueba si existe una sesión de usuario activa.
-  * **Si la sesión está activa**, el usuario es dirigido directamente a la **`UserHomeActivity`**, su panel principal.
-  * **Si no hay sesión**, se le presentan tres opciones claras: "Iniciar Sesión" (que lleva a `LoginUserActivity`), "Registro" (que lleva a `CreateAccountActivity`), y "Usar Afinador Básico" (que ofrece acceso inmediato a `BasicTunerActivity` sin necesidad de una cuenta).
-* Las pantallas de `Login` y `Registro` están interconectadas para facilitar el flujo, y ambas conducen a la `UserHomeActivity` tras una autenticación exitosa.
-
-### Módulo Principal (Usuario Registrado)
-
-La **`UserHomeActivity`** es el hub central para los usuarios registrados. Desde aquí, la navegación se ramifica hacia los módulos principales de la aplicación:
-
-* **Gestión de Instrumentos:**
-  * Se accede a `InstrumentsActivity` para ver la colección completa.
-  * Desde esta pantalla, el usuario puede iniciar el proceso de creación (`CreateInstrumentActivity`) o, mediante un diálogo de opciones, modificar (`EditInstrumentActivity`) o afinar un instrumento.
-* **Afinación:**
-  * Se puede acceder al `BasicTunerActivity` como herramienta rápida (incluso sin haber iniciado sesión).
-  * Se accede al `SpecificTunerActivity` de forma contextual desde las listas de instrumentos o favoritos para una afinación de precisión.
-* **Contenido Educativo:**
-  * El botón "Tips y Guías" lleva a `TipsActivity`, que sirve de portal para la guía de afinación y la tabla de frecuencias.
-* **Gestión de Perfil:**
-  * `SettingsActivity` centraliza todas las opciones de la cuenta, incluyendo el cierre de sesión, que devuelve al usuario al flujo de autenticación inicial.
-
----
-
 ## 📸 Capturas de Pantalla
 
 |                                                                Menú Principal                                                                | Afinador Específico | Lista de Instrumentos |
@@ -55,17 +31,58 @@ La **`UserHomeActivity`** es el hub central para los usuarios registrados. Desde
 
 ---
 
+## ✨ Características
 
-## ✨ Características Principales
+*   **Afinador de Precisión para Percusión:**
+    *   Detecta la frecuencia fundamental real gracias a un motor de audio avanzado (FFT + HPS).
+    *   Proporciona **feedback visual instantáneo** (colores e indicadores "Apretar/Aflojar") para guiar al músico hacia la nota objetivo.
 
-* **Sistema de Autenticación:** Registro, inicio de sesión y gestión de perfiles de usuario.
-* **Afinador Básico Cromático:** Para una rápida identificación de cualquier nota musical.
-* **Afinador Específico por Objetivo:** Guía al usuario con feedback visual (colores e instrucciones "Apretar/Aflojar") para alcanzar una frecuencia predeterminada.
-* **Gestión de Instrumentos (CRUD):**
-    * Un catálogo de instrumentos predefinidos.
-    * Posibilidad de crear, modificar y eliminar instrumentos personalizados.
-    * Sistema de "Favoritos" para un acceso rápido.
-* **Módulo Educativo:** Incluye una guía visual paso a paso para afinar un tambor y una tabla de consulta de frecuencias.
+*   **Biblioteca de Instrumentos Personalizada:**
+    *   Incluye un catálogo de instrumentos de batucada predefinidos con sus afinaciones estándar.
+    *   Soporte **CRUD** completo: crea, edita y elimina tus propios instrumentos.
+    *   Marca instrumentos como **favoritos** para un acceso inmediato.
+
+*   **Sistema de Cuentas de Usuario:**
+    *   Guarda tu colección de instrumentos de forma segura en tu perfil personal.
+    *   Acceso rápido y protegido mediante inicio de sesión.
+
+*   **Contenido Educativo Integrado:**
+    *   Una **guía de afinación** visual paso a paso, ideal para principiantes.
+    *   Tabla de consulta de frecuencias recomendadas para diferentes tambores.
+
+*   **Acceso Rápido sin Registro:**
+    *   Incluye un **afinador cromático básico** de acceso inmediato para mediciones rápidas, sin necesidad de crear una cuenta.
+ 
+---
+
+## 🚀 Getting Started
+
+Sigue estos pasos para compilar y ejecutar una copia del proyecto en tu máquina local.
+
+### Prerrequisitos
+
+Asegúrate de tener instalado el siguiente software:
+
+*   **Android Studio:** [Jellyfish | 2023.3.1](https://developer.android.com/studio) o una versión superior.
+*   **JDK:** Versión 17 o superior.
+*   **Dispositivo Android:** Un dispositivo físico o emulador con Android 7.0 (API 24) o superior.
+
+### Instalación
+
+1.  **Clona el repositorio**
+    ```sh
+    git clone https://github.com/MartaHPortilla/BatucadaFina.git
+    ```
+
+2.  **Abre el proyecto en Android Studio**
+    *   Ve a `File` -> `Open` y selecciona el directorio del proyecto que acabas de clonar.
+
+3.  **Sincroniza las dependencias**
+    *   Espera a que Android Studio termine el proceso de `Gradle Sync`. Esto descargará todas las librerías necesarias.
+
+4.  **Ejecuta la aplicación**
+    *   Selecciona un dispositivo (emulador o físico) y pulsa el botón `Run 'app'`.
+    *   ¡Listo! No se requiere ninguna configuración adicional ni claves de API para ejecutar el proyecto.
 
 ---
 
@@ -105,3 +122,18 @@ BatukAfina es un proyecto con un gran potencial de crecimiento. Algunas de las f
 * **Sincronización en la nube con Firebase** para permitir perfiles de usuario multiplataforma y la posibilidad de compartir afinaciones.
 * **Nuevas herramientas para el músico**, como un metrónomo avanzado y una grabadora de ritmos.
 * **Mejora del diseño de la interfaz de usuario** para una experiencia más fluida y accesible.
+
+---
+
+## 👨‍💻 Autora
+
+**Marta H. Portilla**
+
+*   GitHub: [@MartaHPortilla](https://github.com/MartaHPortilla)
+*   LinkedIn: [Marta H. Portilla](https://www.linkedin.com/in/martahportilla/)
+
+---
+
+## 📄 Licencia
+
+Este proyecto se distribuye bajo la Licencia MIT. Consulta el archivo `LICENSE.md` para más detalles.
