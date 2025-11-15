@@ -13,3 +13,9 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Claude Code documentation and config (private, not for public repo)
+CLAUDE.md
+CLAUDE2.md
+agents-requirements/
+.claude/
